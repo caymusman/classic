@@ -30,14 +30,14 @@ body{
         right: 8%;
         top: 6%;
         #dropdownIcon{
-            width: 2.7vmax;
-            height: 2.7vmax;
+            width: 2.4vmax;
+            height: 2.4vmax;
             cursor: pointer;
 
             span{
                 position: relative; 
                 width: 100%;
-                height: 0.9vmax;
+                height: 0.8vmax;
                 display: block;
                 transition: all .3s;
 
@@ -84,7 +84,6 @@ body{
             text-align: center;
             color: $mainRed;
             font-family: 'Josefin Sans', sans-serif;
-            font-feature-settings: "kern", "liga", "clig", "calt"
         }
     }
 }
