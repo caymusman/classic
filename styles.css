@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#firstPane {
+  width: 100vw;
+  height: 90vh;
+  background-color: #fff7e2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#firstPane #logo {
+  position: absolute;
+  left: 10%;
+  top: 5%;
+}
+
+#firstPane #logo img {
+  width: 25%;
+  height: 25%;
+}
+
+#firstPane #dropdownOuter {
+  position: absolute;
+  right: 8%;
+  top: 6%;
+}
+
+#firstPane #dropdownOuter #dropdownIcon {
+  width: 2.7vmax;
+  height: 2.7vmax;
+  cursor: pointer;
+}
+
+#firstPane #dropdownOuter #dropdownIcon span {
+  position: relative;
+  width: 100%;
+  height: 0.9vmax;
+  display: block;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+#firstPane #dropdownOuter #dropdownIcon span:after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid #4C102A;
+}
+
+#firstPane #dropdownOuter #dropdownIcon #ddSpanOne:after, #firstPane #dropdownOuter #dropdownIcon #ddSpanThree:after {
+  width: 80%;
+}
+
+#firstPane #dropdownOuter #dropdownIcon #ddSpanTwo:after {
+  width: 40%;
+}
+
+#firstPane #dropdownOuter #dropdownIcon:hover #ddSpanOne {
+  -webkit-transform: translate(-15%, 100%) rotate(45deg);
+          transform: translate(-15%, 100%) rotate(45deg);
+}
+
+#firstPane #dropdownOuter #dropdownIcon:hover #ddSpanTwo {
+  opacity: 0;
+}
+
+#firstPane #dropdownOuter #dropdownIcon:hover #ddSpanThree {
+  -webkit-transform: translate(6%, -139%) rotate(-45deg);
+          transform: translate(6%, -139%) rotate(-45deg);
+}
+
+#firstPane #firstPaneTextDiv {
+  width: 50%;
+  height: 40%;
+}
+
+#firstPane #firstPaneTextDiv #firstPaneText {
+  font-size: 5vmax;
+  text-align: center;
+  color: #4C102A;
+  font-family: 'Josefin Sans', sans-serif;
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+          font-feature-settings: "kern", "liga", "clig", "calt";
+}
+/*# sourceMappingURL=styles.css.map */
