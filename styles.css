@@ -2,6 +2,55 @@
 body {
   padding: 0;
   margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+#dropdown {
+  width: 100vw;
+  height: 0vh;
+  background-color: #4C102A;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  position: absolute;
+  z-index: 4;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#dropdown #ddColOne, #dropdown #ddColTwo {
+  width: 20vw;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#dropdown #ddColOne a, #dropdown #ddColTwo a {
+  font-size: 4vmax;
+  text-decoration: none;
+  color: #fff7e2;
+}
+
+#dropdown.showDD {
+  height: 90vh;
 }
 
 #firstPane {
@@ -34,6 +83,25 @@ body {
   position: absolute;
   right: 8%;
   top: 6%;
+  z-index: 8;
+}
+
+#firstPane #dropdownOuter #dropdownIcon.showDD span:after {
+  border-bottom: 2px solid #fff7e2;
+}
+
+#firstPane #dropdownOuter #dropdownIcon.showDD #ddSpanOne {
+  -webkit-transform: translate(-20%, 100%) rotate(45deg);
+          transform: translate(-20%, 100%) rotate(45deg);
+}
+
+#firstPane #dropdownOuter #dropdownIcon.showDD #ddSpanTwo {
+  opacity: 0;
+}
+
+#firstPane #dropdownOuter #dropdownIcon.showDD #ddSpanThree {
+  -webkit-transform: translate(-1%, -135%) rotate(-45deg);
+          transform: translate(-1%, -135%) rotate(-45deg);
 }
 
 #firstPane #dropdownOuter #dropdownIcon {
@@ -65,20 +133,6 @@ body {
   width: 40%;
 }
 
-#firstPane #dropdownOuter #dropdownIcon:hover #ddSpanOne {
-  -webkit-transform: translate(-15%, 100%) rotate(45deg);
-          transform: translate(-15%, 100%) rotate(45deg);
-}
-
-#firstPane #dropdownOuter #dropdownIcon:hover #ddSpanTwo {
-  opacity: 0;
-}
-
-#firstPane #dropdownOuter #dropdownIcon:hover #ddSpanThree {
-  -webkit-transform: translate(6%, -139%) rotate(-45deg);
-          transform: translate(6%, -139%) rotate(-45deg);
-}
-
 #firstPane #firstPaneTextDiv {
   width: 50%;
   height: 40%;
@@ -88,6 +142,25 @@ body {
   font-size: 5vmax;
   text-align: center;
   color: #4C102A;
-  font-family: 'Josefin Sans', sans-serif;
+}
+
+#secondPane {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #fcfcfc;
+}
+
+#secondPane #secondPaneTextDiv #secondPaneText {
+  font-size: 5vmax;
+  color: #47556d;
 }
 /*# sourceMappingURL=styles.css.map */
