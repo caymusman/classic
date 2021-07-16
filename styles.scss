@@ -15,8 +15,8 @@ body{
     height: 0vh;
     background-color: $mainRed;
     transition: all .5s;
-    position: absolute;
-    z-index: 4;
+    position: fixed;
+    z-index: 1000;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -45,6 +45,7 @@ body{
 #firstPane{
     width: 100vw;
     height: 90vh;
+    min-height: 500px;
     background-color: $mainTan;
     display: grid;
     place-items: center;
@@ -61,13 +62,12 @@ body{
     }
 
     #dropdownOuter{
-        position: absolute;
+        position: fixed;
         right: 8%;
         top: 6%;
-        z-index: 8;
+        z-index: 1001;
 
         #dropdownIcon.showDD{
-
             span{
                 &:after{
                     border-bottom: 2px solid $mainTan;
@@ -133,6 +133,7 @@ body{
 #secondPane{
     position: relative;
     height: 100vh;
+    min-height: px;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -141,9 +142,11 @@ body{
 
     #secondPaneTextDiv{
         z-index: 6;
+        mix-blend-mode: difference;
         #secondPaneText{
             font-size: 5vmax;
-            color: $mainBlue;
+            color: white;
+            
         }
     }
 
@@ -159,6 +162,19 @@ body{
             width: 20vw;
 
             #flo-comp{
+                width: 100%;
+                height: auto;
+                mix-blend-mode: difference;
+            }
+        }
+
+        #antonio-compDiv{
+            position: absolute;
+            left: 40%;
+            top: 20%;
+            width: 25vw;
+
+            #antonio-comp{
                 width: 100%;
                 height: auto;
                 mix-blend-mode: difference;

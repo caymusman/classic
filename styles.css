@@ -12,8 +12,8 @@ body {
   background-color: #4C102A;
   -webkit-transition: all .5s;
   transition: all .5s;
-  position: absolute;
-  z-index: 4;
+  position: fixed;
+  z-index: 1000;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,6 +58,7 @@ body {
 #firstPane {
   width: 100vw;
   height: 90vh;
+  min-height: 500px;
   background-color: #fff7e2;
   display: -ms-grid;
   display: grid;
@@ -77,10 +78,10 @@ body {
 }
 
 #firstPane #dropdownOuter {
-  position: absolute;
+  position: fixed;
   right: 8%;
   top: 6%;
-  z-index: 8;
+  z-index: 1001;
 }
 
 #firstPane #dropdownOuter #dropdownIcon.showDD span:after {
@@ -144,6 +145,7 @@ body {
 #secondPane {
   position: relative;
   height: 100vh;
+  min-height: px;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -159,11 +161,12 @@ body {
 
 #secondPane #secondPaneTextDiv {
   z-index: 6;
+  mix-blend-mode: difference;
 }
 
 #secondPane #secondPaneTextDiv #secondPaneText {
   font-size: 5vmax;
-  color: #47556d;
+  color: white;
 }
 
 #secondPane #secondPaneImgs {
@@ -182,6 +185,19 @@ body {
 }
 
 #secondPane #secondPaneImgs #flo-compDiv #flo-comp {
+  width: 100%;
+  height: auto;
+  mix-blend-mode: difference;
+}
+
+#secondPane #secondPaneImgs #antonio-compDiv {
+  position: absolute;
+  left: 40%;
+  top: 20%;
+  width: 25vw;
+}
+
+#secondPane #secondPaneImgs #antonio-compDiv #antonio-comp {
   width: 100%;
   height: auto;
   mix-blend-mode: difference;
