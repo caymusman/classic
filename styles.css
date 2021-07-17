@@ -58,14 +58,14 @@ body {
 }
 
 #dropdown.showDD #ddColOne a, #dropdown.showDD #ddColTwo a {
-  color: #fff7e2;
+  color: #f1ede8;
 }
 
 #firstPane {
   width: 100vw;
   height: 90vh;
   min-height: 400px;
-  background-color: #fff7e2;
+  background-color: #f1ede8;
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -91,7 +91,7 @@ body {
 }
 
 #firstPane #dropdownOuter #dropdownIcon.showDD span:after {
-  border-bottom: 2px solid #fff7e2;
+  border-bottom: 2px solid #f1ede8;
 }
 
 #firstPane #dropdownOuter #dropdownIcon.showDD #ddSpanOne {
@@ -176,7 +176,7 @@ body {
 
 #secondPane #secondPaneTextDiv #secondPaneText {
   font-size: 5vmax;
-  color: #796b52;
+  color: #817d67;
 }
 
 #secondPane #secondPaneImgs {
@@ -246,7 +246,7 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #47556d;
+  background-color: #4C102A;
   -webkit-transition: height .3s;
   transition: height .3s;
 }
@@ -254,7 +254,7 @@ body {
 #secondPane #learnMore #learnMoreSpan {
   position: relative;
   z-index: 5;
-  color: #47556d;
+  color: #4C102A;
   -webkit-transition: color .3s;
   transition: color .3s;
 }
@@ -292,7 +292,7 @@ body {
 
 #footerDiv #footer a {
   text-decoration: none;
-  color: #fff7e2;
+  color: #f1ede8;
   font-size: 2vmax;
 }
 /*# sourceMappingURL=styles.css.map */

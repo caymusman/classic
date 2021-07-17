@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
 $mainRed: #4C102A;
-$mainTan: #fff7e2;
-$mainBlue: #47556d;
-$antiBlue: #796b52;
+$mainTan: lighten(#EFEBE5, 1%);
+$mainBlue: #6C6781;
+$antiBlue: #817d67;
+
+$lightAccent: #A3886F;
+$darkAccent: #8B6D76;
+$black: #1B1620;
 
 body{
     padding: 0;
@@ -226,14 +230,14 @@ body{
             left: 0;
             bottom: 0;
             width: 100%;
-            background-color: $mainBlue;
+            background-color: $mainRed;
             transition: height .3s;
         }
 
         #learnMoreSpan{
             position: relative;
             z-index: 5;
-            color: $mainBlue;
+            color: $mainRed;
             transition: color .3s;
         }
         &:hover{
