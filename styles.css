@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 :root {
   --page-height: 0px;
   --page-width: 0px;
@@ -89,7 +90,7 @@ html, body {
 }
 
 #firstPane #dropdownOuter {
-  position: fixed;
+  position: absolute;
   right: 8%;
   top: 40px;
   z-index: 1001;
@@ -159,7 +160,7 @@ html, body {
   position: relative;
   height: var(--page-height);
   width: 100vw;
-  background-color: #6C6781;
+  background-color: #6b3b4e;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -172,14 +173,6 @@ html, body {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-}
-
-#secondPane #wwd {
-  position: absolute;
-  left: 10%;
-  top: 5%;
-  font-size: 3vmax;
-  color: #f1ede8;
 }
 
 #secondPane #cardDiv {
@@ -205,7 +198,7 @@ html, body {
   height: 90%;
   width: 25%;
   min-width: 200px;
-  background-color: #6C6781;
+  background-color: #6b3b4e;
   position: relative;
   z-index: 2;
 }
@@ -244,18 +237,17 @@ html, body {
   position: absolute;
   height: 90%;
   width: 100%;
-  background-color: #6b3b4e;
+  background-color: #f1ede8;
   z-index: 3;
   bottom: 0;
   border-radius: 5px;
   -webkit-box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  color: #6C6781;
 }
 
 #secondPane .cardContent .cardContentText {
-  color: #f1ede8;
+  color: #6b3b4e;
   width: 70%;
   height: 40%;
   position: absolute;
@@ -263,17 +255,44 @@ html, body {
   left: 15%;
 }
 
-#secondPane .cardContent img {
+#secondPane .cardContent .cardContentText h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#secondPane .cardContent .cardContentText .timing {
+  color: #6C6781;
+  white-space: nowrap;
   position: absolute;
-  bottom: 0%;
+  bottom: -15%;
+  right: -10%;
+  width: 60%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#secondPane .cardContent .cardContentText .timing img {
+  width: 12%;
+}
+
+#secondPane .cardContent .down {
+  position: absolute;
+  bottom: -4%;
   width: 15%;
   height: 15%;
-  left: 41%;
+  left: 10%;
   cursor: pointer;
 }
 
 #secondPane #learnMore {
-  background-color: #6C6781;
+  background-color: #6b3b4e;
 }
 
 #secondPane #learnMore:before {
@@ -285,7 +304,7 @@ html, body {
 }
 
 #secondPane #learnMore:hover #learnMoreSpan {
-  color: #6C6781;
+  color: #6b3b4e;
 }
 
 button {
@@ -324,7 +343,42 @@ button:hover:before {
   height: 100%;
 }
 
+.headers {
+  position: absolute;
+  left: 10%;
+  top: 5%;
+  font-size: 3vmax;
+  color: #f1ede8;
+}
+
 #thirdPane {
+  height: var(--page-height);
+  background-color: #3E3940;
+  position: relative;
+}
+
+#thirdPane #ourMission {
+  background-color: #3E3940;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 10%;
+}
+
+#thirdPane #ourMission:before {
+  background-color: #f1ede8;
+}
+
+#thirdPane #ourMission span {
+  color: #f1ede8;
+}
+
+#thirdPane #ourMission:hover #ourMissionSpan {
+  color: #3E3940;
+}
+
+#fourthPane {
   height: var(--page-height);
   position: relative;
   background-color: #6b3b4e;
@@ -342,15 +396,7 @@ button:hover:before {
           align-items: center;
 }
 
-#thirdPane #wwu {
-  position: absolute;
-  left: 10%;
-  top: 5%;
-  font-size: 3vmax;
-  color: #f1ede8;
-}
-
-#thirdPane #thirdContent {
+#fourthPane #fourthContent {
   margin-top: 10%;
   position: relative;
   height: 50%;
@@ -364,33 +410,33 @@ button:hover:before {
   gap: 10%;
 }
 
-#thirdPane #thirdContent #imgNine {
+#fourthPane #fourthContent #imgNine {
   width: 50%;
 }
 
-#thirdPane #thirdContent img {
+#fourthPane #fourthContent img {
   width: 60%;
   height: auto;
 }
 
-#thirdPane #seeMore {
+#fourthPane #seeMore {
   background-color: #6b3b4e;
   margin-top: 5%;
 }
 
-#thirdPane #seeMore:before {
+#fourthPane #seeMore:before {
   background-color: #f1ede8;
 }
 
-#thirdPane #seeMore span {
+#fourthPane #seeMore span {
   color: #f1ede8;
 }
 
-#thirdPane #seeMore:hover #seeMoreSpan {
+#fourthPane #seeMore:hover #seeMoreSpan {
   color: #6b3b4e;
 }
 
-#fourthPane {
+#fifthPane {
   height: calc(var(--page-height) * .80);
   background-color: #f1ede8;
   padding: 0;
@@ -401,7 +447,7 @@ button:hover:before {
   text-align: center;
 }
 
-#fourthPane #fourthContent {
+#fifthPane #fifthContent {
   width: 60%;
   height: 30%;
   display: -webkit-box;
@@ -418,22 +464,22 @@ button:hover:before {
       justify-content: space-around;
 }
 
-#fourthPane #fourthContent h3 {
+#fifthPane #fifthContent h3 {
   font-size: 4vmax;
   font-weight: bold;
   margin: 0;
   padding: 0;
 }
 
-#fourthPane #fourthContent p {
+#fifthPane #fifthContent p {
   font-size: 2vmax;
 }
 
-#fourthPane #fourthContent label {
+#fifthPane #fifthContent label {
   display: none;
 }
 
-#fourthPane #fourthContent input {
+#fifthPane #fifthContent input {
   outline: none;
   border: 1px solid black;
   padding: 10%;
@@ -442,30 +488,30 @@ button:hover:before {
   margin-left: -5%;
 }
 
-#fourthPane #fourthContent input:invalid {
+#fifthPane #fifthContent input:invalid {
   border: 2px solid #6b3b4e;
 }
 
-#fourthPane #fourthContent input:valid {
+#fifthPane #fifthContent input:valid {
   border: 2px solid #558c4f;
 }
 
-#fourthPane #emailSubmit {
+#fifthPane #emailSubmit {
   background-color: #f1ede8;
   position: absolute;
   bottom: 10%;
   height: 6.25%;
 }
 
-#fourthPane #emailSubmit:before {
+#fifthPane #emailSubmit:before {
   background-color: #6b3b4e;
 }
 
-#fourthPane #emailSubmit span {
+#fifthPane #emailSubmit span {
   color: #3E3940;
 }
 
-#fourthPane #emailSubmit:hover #emailSubmitSpan {
+#fifthPane #emailSubmit:hover #emailSubmitSpan {
   color: #f1ede8;
 }
 
@@ -521,7 +567,7 @@ button:hover:before {
     width: 25%;
     font-size: 2vmax;
   }
-  #secondPane #wwd {
+  .headers {
     font-size: 5vmax;
   }
   #secondPane #cardDiv {
@@ -541,25 +587,46 @@ button:hover:before {
   }
   #secondPane .cardContent {
     left: 5%;
+    position: relative;
   }
   #secondPane .cardContent .cardContentText {
     width: 90%;
-    height: 40%;
+    height: 80%;
     position: absolute;
     top: 5%;
     left: 20%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 60% 50%;
+    -ms-grid-columns: 50% 30%;
+        grid-template: 60% 50%/ 50% 30%;
+    place-items: center;
+    text-align: center;
   }
-  #thirdPane #wwu {
-    font-size: 5vmax;
+  #secondPane .cardContent .cardContentText h3, #secondPane .cardContent .cardContentText p, #secondPane .cardContent .cardContentText img {
+    position: relative;
   }
-  #thirdPane #thirdContent {
+  #secondPane .cardContent .cardContentText .timing {
+    position: unset;
+    width: unset;
+  }
+  #secondPane .cardContent .cardContentText .timing img {
+    margin: 1vw;
+    width: 3vw;
+  }
+  #secondPane .cardContent .down {
+    width: 4vw;
+    height: 4vw;
+    position: static;
+  }
+  #secondPane #fourthPane #fourthContent {
     margin-top: 20%;
     height: 70%;
     gap: 0;
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 800px) and (max-width: 450px) {
   #secondPane #cardDiv {
     margin-top: 25%;
     height: 60%;
@@ -570,14 +637,22 @@ button:hover:before {
     display: relative;
     height: 25%;
   }
-  #secondPane .cardContent .cardContentText {
-    left: 20%;
-    top: 10%;
+  #secondPane .card .cardImg {
+    min-width: 88px;
+    min-height: 88px;
   }
-  #secondPane .cardImg {
-    min-width: 100px;
-    min-height: 100px;
+  #secondPane .cardContent .cardContentText .timing {
+    font-size: 3vw;
   }
+  #secondPane .cardContent h3 {
+    font-size: 4vw;
+  }
+  #secondPane .cardContent .cardText {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
   #fourthPane #fourthContent {
     height: 50%;
   }

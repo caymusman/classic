@@ -39,15 +39,16 @@
             </div>
         </div>
         <div id="secondPane">
-            <h2 id="wwd">what we do</h2>
+            <h2 class="headers" id="wwd">what we do</h2>
             <div id="cardDiv">
                 <div id="cardOne" class="card">
                     <div id="cardOneImg" class="cardImg"></div>
                     <div id="cardOneContent" class="cardContent">
                         <div id="cardOneContentTextOuter" class="cardContentText">
                             <h3 class="cardHeader">Learning</h3>
+                            <p class="timing"><img src="/img/clock.svg" alt=""> 2 minute read</p>
                             <p class="cardText">Lorem Ipsum blah blah blah</p>
-                            <img src="/img/down.svg" alt="down arrow">
+                            <img class="down" src="/img/down.svg" alt="down arrow"> <!--LINK TO EXTENDED INFO-->      
                         </div>
                     </div>
                 </div>
@@ -58,8 +59,9 @@
                     <div id="cardTwoContent" class="cardContent">
                         <div id="cardOneContentTextOuter" class="cardContentText">
                             <h3 class="cardHeader">Growing</h3>
+                            <p class="timing"><img src="/img/clock.svg" alt=""> 3 minute read</p>
                             <p class="cardText">Lorem Ipsum blah blah blah</p>
-                            <img src="/img/down.svg" alt="down arrow">
+                            <img class="down" src="/img/down.svg" alt="down arrow"> <!--LINK TO EXTENDED INFO-->
                         </div>
                     </div>
                 </div>
@@ -70,8 +72,9 @@
                     <div id="cardThreeContent" class="cardContent">
                         <div id="cardOneContentTextOuter" class="cardContentText">
                             <h3 class="cardHeader">Achieving</h3>
+                            <p class="timing"><img src="/img/clock.svg" alt=""> 5 minute read</p>
                             <p class="cardText">Lorem Ipsum blah blah blah</p>
-                            <img src="/img/down.svg" alt="down arrow">
+                            <img class="down" src="/img/down.svg" alt="down arrow"> <!--LINK TO EXTENDED INFO-->
                         </div>
                     </div>
                 </div>
@@ -79,9 +82,15 @@
             <button class="button" id="learnMore"><span id="learnMoreSpan">Learn More</span></button>
         </div>
         <div id="thirdPane">
-            <h2 id="wwu">who's with us</h2>
+            <h2 class="headers" id="wwdi">why we do it</h2>
             <div id="thirdContent">
-                <img src="/img/sponsors/one.png" alt="logo">
+            </div>
+            <button class="button" id="ourMission"><span id="ourMissionSpan">Our Mission</span></button>
+        </div>
+        <div id="fourthPane">
+            <h2 class="headers" id="wwu">who's with us</h2>
+            <div id="fourthContent"> <!--THESE CAN EACH BE LINKS TO SPONSOR SITES-->
+                <img src="/img/sponsors/one.png" alt="logo"> 
                 <img src="/img/sponsors/two.png" alt="logo">
                 <img src="/img/sponsors/three.png" alt="logo">
                 <img src="/img/sponsors/four.png" alt="logo">
@@ -93,8 +102,8 @@
             </div>
             <button class="button" id="seeMore"><span id="seeMoreSpan">See More</span></button>
         </div>
-        <div id="fourthPane">
-            <div id="fourthContent">
+        <div id="fifthPane">
+            <div id="fifthContent">
                 <h3 id="dbaStranger">Don't be a stranger.</h3>
                 <p id="emailP">Come and get to know us by signing up for our communication list</p>
                 <form id="emailForm">

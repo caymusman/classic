@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 $mainRed: #6b3b4e;
 $mainTan: #f1ede8;
 $mainBlue: #6C6781;
@@ -85,7 +86,7 @@ html, body{
     }
 
     #dropdownOuter{
-        position: fixed;
+        position: absolute;
         right: 8%;
         top: 40px;
         z-index: 1001;
@@ -159,20 +160,12 @@ html, body{
     position: relative;
     height: var(--page-height);
     width: 100vw;
-    background-color: $mainBlue;
+    background-color: $mainRed;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-
-    #wwd{
-        position: absolute;
-        left: 10%;
-        top: 5%;
-        font-size: 3vmax;
-        color:$mainTan;
-    }
 
     #cardDiv{
         margin-top: 8%;
@@ -194,7 +187,7 @@ html, body{
         height: 90%;
         width: 25%;
         min-width: 200px;
-        background-color: $mainBlue;
+        background-color: $mainRed;
         position: relative;
         z-index: 2;
     }
@@ -230,35 +223,55 @@ html, body{
         position: absolute;
         height: 90%;
         width: 100%;
-        background-color: $mainRed;
+        background-color: $mainTan;
         z-index: 3;
         bottom: 0;
         border-radius: 5px;
         box-shadow: $deepShadow;
         overflow: hidden;
-        color: $mainBlue;
 
         .cardContentText{
-            color: $mainTan;
+            color: $mainRed;
             width: 70%;
             height: 40%;
             position: absolute;
             bottom: 8%;
             left: 15%;
+
+            h3{
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            .timing{
+                color: $mainBlue;
+                white-space: nowrap;
+                position: absolute;
+                bottom: -15%;
+                right: -10%;
+                width: 60%;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                img{
+
+                    width: 12%;
+                }
+            }
         }
 
-        img{
+        .down{
             position: absolute;
-            bottom: 0%;
+            bottom: -4%;
             width: 15%;
             height: 15%;
-            left: 41%;
+            left: 10%;
             cursor: pointer;
         }
     }
 
     #learnMore{
-        background-color: $mainBlue;
+        background-color: $mainRed;
 
         &:before{
             background-color: $mainTan;
@@ -270,7 +283,7 @@ html, body{
 
         &:hover{
             #learnMoreSpan{
-                color: $mainBlue;
+                color: $mainRed;
             }
         }
     }
@@ -312,7 +325,43 @@ button{
     }
 }
 
+.headers{
+    position: absolute;
+    left: 10%;
+    top: 5%;
+    font-size: 3vmax;
+    color:$mainTan;
+}
+
 #thirdPane{
+    height: var(--page-height);
+    background-color: $black;
+    position: relative;
+
+    #ourMission{
+        background-color: $black;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10%;
+
+        &:before{
+            background-color: $mainTan;
+        }
+
+        span{
+            color: $mainTan;
+        }
+
+        &:hover{
+            #ourMissionSpan{
+                color: $black;
+            }
+        }
+    }
+}
+
+#fourthPane{
     height: var(--page-height);
     position: relative;
     background-color: $mainRed;
@@ -321,15 +370,8 @@ button{
     justify-content: space-around;
     align-items: center;
 
-    #wwu{
-        position: absolute;
-        left: 10%;
-        top: 5%;
-        font-size: 3vmax;
-        color:$mainTan;
-    }
 
-    #thirdContent{
+    #fourthContent{
         margin-top: 10%;
         position: relative;
         height: 50%;
@@ -370,7 +412,7 @@ button{
     }
 }
 
-#fourthPane{
+#fifthPane{
     height: calc(var(--page-height) * .80);
     background-color: $mainTan;
     padding: 0;
@@ -379,7 +421,7 @@ button{
     position: relative;
     text-align: center;
 
-    #fourthContent{
+    #fifthContent{
         width: 60%;
         height: 30%;
         display: flex;
@@ -468,10 +510,11 @@ button{
         width: 25%;
         font-size: 2vmax;
     }
+
+    .headers{
+        font-size: 5vmax;
+    }
     #secondPane{
-        #wwd{
-            font-size: 5vmax;
-        }
         #cardDiv{
             flex-direction: column;
             margin-top: 15%;
@@ -490,23 +533,42 @@ button{
 
         .cardContent{
            left: 5%;
+           position: relative;
            .cardContentText{
             width: 90%;
-            height: 40%;
+            height: 80%;
             position: absolute;
             top: 5%;
             left: 20%;
+            display: grid;
+            grid-template: 60% 50%/ 50% 30%;
+            place-items: center;
+            text-align: center;
+
+            h3, p, img{
+                position: relative;
             }
+
+            .timing{
+                position: unset;
+                width: unset;
+
+                img{
+                    margin: 1vw;
+                    width:3vw;
+                }
+            }
+        }
+        .down{
+            width: 4vw;
+            height: 4vw;
+            position: static;
         }
 
     }
 
-    #thirdPane{
-        #wwu{
-            font-size: 5vmax;
-        }
-
-        #thirdContent{
+    #fourthPane{
+        #fourthContent{
             margin-top: 20%;
             height: 70%;
             gap: 0;
@@ -526,18 +588,27 @@ button{
             left: 5%;
             display: relative;
             height: 25%;
+
+            .cardImg{
+                min-width: 88px;
+                min-height: 88px;
+            }
         }
 
         .cardContent{
             .cardContentText{
-                left: 20%;
-                top: 10%;
+                .timing{
+                    font-size: 3vw;
+                }
             }
-        }
 
-        .cardImg{
-            min-width: 100px;
-            min-height: 100px;
+            h3{
+                font-size: 4vw;
+            }
+
+            .cardText{
+                font-size: 3vw;
+            } }
         }
     }
 
@@ -560,10 +631,6 @@ button{
     }
 
 }
-
-
-
-//more media queries for width 400
 
 
 

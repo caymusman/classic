@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
     <style>
         path{
-            fill: #e1dcd7;
+            fill: #6b3b4e;
         }
     </style>
     <path d="m 403 236 l 15 19 l -163 147 l -157 -147 l 24 -16 l 116 109 v -320 h 33 v 320 z"/>
