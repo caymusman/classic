@@ -253,6 +253,7 @@ html, body {
   border-radius: 5px;
   -webkit-box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
 #secondPane .cardContent .cardContentText {
@@ -379,11 +380,29 @@ html, body {
     height: 40%;
     position: absolute;
     top: 5%;
-    left: 25%;
+    left: 20%;
   }
   #secondPane #learnMore {
-    width: 20%;
+    width: 25%;
     font-size: 2vmax;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #secondPane #cardDiv {
+    margin-top: 25%;
+    height: 60%;
+  }
+  #secondPane .card {
+    width: 90%;
+    left: 5%;
+  }
+  #secondPane .cardContent .cardContentText {
+    left: 20%;
+  }
+  #secondPane .cardImg {
+    min-width: 100px;
+    min-height: 100px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

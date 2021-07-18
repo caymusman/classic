@@ -237,6 +237,7 @@ html, body{
         bottom: 0;
         border-radius: 5px;
         box-shadow: $deepShadow;
+        overflow: hidden;
 
         .cardContentText{
             width: 90%;
@@ -340,16 +341,43 @@ html, body{
             height: 40%;
             position: absolute;
             top: 5%;
-            left: 25%;
+            left: 20%;
             }
         }
 
         #learnMore{
-            width: 20%;
+            width: 25%;
             font-size: 2vmax;
         }
 
     }
+}
+
+@media screen and (max-width: 450px){
+    #secondPane{
+
+        #cardDiv{
+            margin-top: 25%;
+            height: 60%;
+        }
+        .card{
+            width: 90%;
+            left: 5%;
+
+        }
+
+        .cardContent{
+            .cardContentText{
+                left: 20%;
+            }
+        }
+
+        .cardImg{
+            min-width: 100px;
+            min-height: 100px;
+        }
+    }
+
 }
 
 
