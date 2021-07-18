@@ -316,6 +316,10 @@ button{
     height: var(--page-height);
     position: relative;
     background-color: $mainRed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 
     #wwu{
         position: absolute;
@@ -326,10 +330,9 @@ button{
     }
 
     #thirdContent{
+        margin-top: 10%;
         position: relative;
-        left: 5%;
-        top: 20%;
-        height: 70%;
+        height: 50%;
         width: 90%;
         display: grid;
         grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
@@ -337,13 +340,32 @@ button{
         gap: 10%;
 
         #imgNine{
-            width: 60%;
+            width: 50%;
         }
 
         img{
-            width: 70%;
+            width: 60%;
             height: auto;
-            border-radius: 5px;
+        }
+    }
+
+    #seeMore{
+        background-color: $mainRed;
+        margin-top: 5%;
+
+
+        &:before{
+            background-color: $mainTan;
+        }
+
+        span{
+            color: $mainTan;
+        }
+
+        &:hover{
+            #seeMoreSpan{
+                color: $mainRed;
+            }
         }
     }
 }
@@ -351,7 +373,6 @@ button{
 #fourthPane{
     height: calc(var(--page-height) * .80);
     background-color: $mainTan;
-    margin-top: -1.3%;
     padding: 0;
     display: grid;
     place-items: center;
@@ -483,6 +504,12 @@ button{
     #thirdPane{
         #wwu{
             font-size: 5vmax;
+        }
+
+        #thirdContent{
+            margin-top: 20%;
+            height: 70%;
+            gap: 0;
         }
     }
 }
