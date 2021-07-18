@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
-$mainRed: rgb(107, 59, 78);
-$mainTan: lighten(#EFEBE5, 1%);
+$mainRed: #6b3b4e;
+$mainTan: #f1ede8;
 $mainBlue: #6C6781;
-$antiBlue: #817d67;
+$mainGreen: #8A867D;
+
 
 $lightAccent: #A3886F;
 $darkAccent: #8B6D76;
-$black: #1B1620;
+$black: #3E3940;
 
 
 $deepShadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 
@@ -202,7 +203,7 @@ html, body{
         position: absolute;
         width: 13vw;
         height: 13vw;
-        background-color: $mainRed;
+        background-color: $black;
         z-index: 4;
         left: 50%;
         transform: translateX(-50%);
@@ -229,19 +230,30 @@ html, body{
         position: absolute;
         height: 90%;
         width: 100%;
-        background-color: $mainTan;
+        background-color: $mainRed;
         z-index: 3;
         bottom: 0;
         border-radius: 5px;
         box-shadow: $deepShadow;
         overflow: hidden;
+        color: $mainBlue;
 
         .cardContentText{
-            width: 90%;
+            color: $mainTan;
+            width: 70%;
             height: 40%;
             position: absolute;
+            bottom: 8%;
+            left: 15%;
+        }
+
+        img{
+            position: absolute;
             bottom: 0%;
-            left: 10%;
+            width: 15%;
+            height: 15%;
+            left: 41%;
+            cursor: pointer;
         }
     }
 
@@ -301,6 +313,42 @@ button{
 }
 
 #thirdPane{
+    height: var(--page-height);
+    position: relative;
+    background-color: $mainRed;
+
+    #wwu{
+        position: absolute;
+        left: 10%;
+        top: 5%;
+        font-size: 3vmax;
+        color:$mainTan;
+    }
+
+    #thirdContent{
+        position: relative;
+        left: 5%;
+        top: 20%;
+        height: 70%;
+        width: 90%;
+        display: grid;
+        grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+        place-items: center;
+        gap: 10%;
+
+        #imgNine{
+            width: 60%;
+        }
+
+        img{
+            width: 70%;
+            height: auto;
+            border-radius: 5px;
+        }
+    }
+}
+
+#fourthPane{
     height: calc(var(--page-height) * .80);
     background-color: $mainTan;
     margin-top: -1.3%;
@@ -310,7 +358,7 @@ button{
     position: relative;
     text-align: center;
 
-    #thirdContent{
+    #fourthContent{
         width: 60%;
         height: 30%;
         display: flex;
@@ -335,7 +383,7 @@ button{
             border: 1px solid black;
             padding: 10%;
             background-color: $mainTan;
-            margin-top: 3%;
+            margin-top: 35%;
             margin-left: -5%;
 
             &:invalid{
@@ -431,6 +479,12 @@ button{
         }
 
     }
+
+    #thirdPane{
+        #wwu{
+            font-size: 5vmax;
+        }
+    }
 }
 
 @media screen and (max-width: 450px){
@@ -460,8 +514,8 @@ button{
         }
     }
 
-    #thirdPane{
-        #thirdContent{
+    #fourthPane{
+        #fourthContent{
             height: 50%;
         }
         h3{
