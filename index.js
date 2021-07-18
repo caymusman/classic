@@ -19,4 +19,5 @@ let root = document.documentElement;
 
 window.onload = () => {
     root.style.setProperty('--page-height', screen.height * .91 + "px");
+    root.style.setProperty('--page-width', screen.width + "px");
 }

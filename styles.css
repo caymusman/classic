@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap");
 :root {
   --page-height: 0px;
+  --page-width: 0px;
 }
 
 html, body {
@@ -18,7 +19,7 @@ html, body {
   width: 100vw;
   top: 100%;
   height: 0vh;
-  background-color: #4C102A;
+  background-color: #6b3b4e;
   -webkit-transition: all .5s;
   transition: all .5s;
   position: fixed;
@@ -73,7 +74,7 @@ html, body {
 #firstPane {
   width: 100vw;
   position: relative;
-  height: calc(var(--page-height) * .9);
+  height: var(--page-height);
   background-color: #f1ede8;
   display: -ms-grid;
   display: grid;
@@ -135,7 +136,7 @@ html, body {
 #firstPane #dropdownOuter #dropdownIcon span:after {
   content: "";
   display: block;
-  border-bottom: 2px solid #4C102A;
+  border-bottom: 2px solid #6b3b4e;
 }
 
 #firstPane #dropdownOuter #dropdownIcon #ddSpanOne:after, #firstPane #dropdownOuter #dropdownIcon #ddSpanThree:after {
@@ -154,14 +155,14 @@ html, body {
 #firstPane #firstPaneTextDiv #firstPaneText {
   font-size: 5vmax;
   text-align: center;
-  color: #4C102A;
+  color: #6b3b4e;
 }
 
 #secondPane {
   position: relative;
   height: var(--page-height);
   width: 100vw;
-  background-color: #1B1620;
+  background-color: #6C6781;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -172,12 +173,20 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#secondPane #wwd {
+  position: absolute;
+  left: 10%;
+  top: 5%;
+  font-size: 3vmax;
+  color: #f1ede8;
 }
 
 #secondPane #cardDiv {
+  margin-top: 5%;
   width: 80%;
   height: 50%;
   display: -webkit-box;
@@ -191,23 +200,46 @@ html, body {
           align-items: center;
 }
 
+#secondPane #cardDiv #cardOne #cardOneImg {
+  background-image: url("/img/typewriter-back.png"), url("/img/typewriter-front.png");
+}
+
 #secondPane .card {
-  height: 80%;
+  height: 90%;
   width: 25%;
-  background-color: #1B1620;
+  min-width: 200px;
+  background-color: #6C6781;
   position: relative;
   z-index: 2;
 }
 
 #secondPane .cardImg {
   position: absolute;
-  width: 80%;
-  height: 50%;
-  background-color: #4C102A;
+  width: 13vw;
+  height: 13vw;
+  background-color: #6b3b4e;
   z-index: 4;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  background-size: 100%;
+  background-blend-mode: darken, normal;
+  background-repeat: no-repeat;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  top: 0%;
+  min-width: 128px;
+  min-height: 128px;
+}
+
+#secondPane .cardImg img {
+  width: 150%;
+  height: auto;
   border-radius: 5px;
 }
 
@@ -219,6 +251,16 @@ html, body {
   z-index: 3;
   bottom: 0;
   border-radius: 5px;
+  -webkit-box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+#secondPane .cardContent .cardContentText {
+  width: 90%;
+  height: 40%;
+  position: absolute;
+  bottom: 0%;
+  left: 10%;
 }
 
 #secondPane #learnMore {
@@ -230,8 +272,8 @@ html, body {
   border: none;
   height: 5%;
   width: 10%;
-  background-color: #f1ede8;
-  bottom: 8%;
+  background-color: #6C6781;
+  bottom: 5%;
 }
 
 #secondPane #learnMore:before {
@@ -243,7 +285,7 @@ html, body {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #4C102A;
+  background-color: #f1ede8;
   -webkit-transition: height .3s;
   transition: height .3s;
 }
@@ -251,13 +293,13 @@ html, body {
 #secondPane #learnMore #learnMoreSpan {
   position: relative;
   z-index: 5;
-  color: #4C102A;
+  color: #f1ede8;
   -webkit-transition: color .3s;
   transition: color .3s;
 }
 
 #secondPane #learnMore:hover #learnMoreSpan {
-  color: #f1ede8;
+  color: #6b3b4e;
 }
 
 #secondPane #learnMore:hover:before {
@@ -270,7 +312,7 @@ html, body {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  background-color: #4C102A;
+  background-color: #6b3b4e;
   overflow: hidden;
 }
 
@@ -291,5 +333,57 @@ html, body {
   text-decoration: none;
   color: #f1ede8;
   font-size: 2vmax;
+}
+
+@media screen and (max-width: 1300px) {
+  #secondPane .cardImg {
+    top: 5%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #secondPane .cardImg {
+    top: 8%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #secondPane .cardImg {
+    top: 15%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #secondPane #wwd {
+    font-size: 5vmax;
+  }
+  #secondPane #cardDiv {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 15%;
+  }
+  #secondPane .card {
+    width: 80%;
+  }
+  #secondPane .cardImg {
+    left: 2%;
+    top: 0px;
+  }
+  #secondPane .cardContent {
+    left: 5%;
+  }
+  #secondPane .cardContent .cardContentText {
+    width: 90%;
+    height: 40%;
+    position: absolute;
+    top: 5%;
+    left: 25%;
+  }
+  #secondPane #learnMore {
+    width: 20%;
+    font-size: 2vmax;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
