@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="wholePage" class="full-height">
+    <div id="wholePage">
         <div id="dropdown">
             <nav id="ddColOne">
                 <a href="#">About</a>
@@ -73,7 +73,19 @@
                     </div>
                 </div>
             </div>
-            <button id="learnMore"><span id="learnMoreSpan">Learn More</span></button>
+            <button class="button" id="learnMore"><span id="learnMoreSpan">Learn More</span></button>
+        </div>
+        <div id="thirdPane">
+            <div id="thirdContent">
+                <h3 id="dbaStranger">Don't be a stranger.</h3>
+                <p id="emailP">Come and get to know us by signing up for our communication list</p>
+                <form id="emailForm">
+                    <label for="emailInput">Email:</label>
+                    <input id="emailInput" type="email" placeholder="Email" required>
+                    <label for="emailSubmit">Submit</label>
+                </form>
+            </div>
+            <button form="emailForm" class="button" id="emailSubmit"><span id="emailSubmitSpan">Sign Me Up</span></button>
         </div>
         <div id="footerDiv">
             <nav id="footer">

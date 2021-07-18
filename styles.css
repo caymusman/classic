@@ -5,14 +5,9 @@
 }
 
 html, body {
-  height: 100%;
   padding: 0;
   margin: 0;
   font-family: 'Josefin Sans', sans-serif;
-}
-
-.full-height {
-  height: 100%;
 }
 
 #dropdown {
@@ -159,6 +154,8 @@ html, body {
 }
 
 #secondPane {
+  margin: 0;
+  padding: 0;
   position: relative;
   height: var(--page-height);
   width: 100vw;
@@ -186,7 +183,7 @@ html, body {
 }
 
 #secondPane #cardDiv {
-  margin-top: 5%;
+  margin-top: 8%;
   width: 80%;
   height: 50%;
   display: -webkit-box;
@@ -265,6 +262,22 @@ html, body {
 }
 
 #secondPane #learnMore {
+  background-color: #6C6781;
+}
+
+#secondPane #learnMore:before {
+  background-color: #f1ede8;
+}
+
+#secondPane #learnMore span {
+  color: #f1ede8;
+}
+
+#secondPane #learnMore:hover #learnMoreSpan {
+  color: #6C6781;
+}
+
+button {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.2vmax;
   cursor: pointer;
@@ -273,11 +286,10 @@ html, body {
   border: none;
   height: 5%;
   width: 10%;
-  background-color: #6C6781;
   bottom: 5%;
 }
 
-#secondPane #learnMore:before {
+button:before {
   content: "";
   z-index: 1;
   position: absolute;
@@ -286,25 +298,99 @@ html, body {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #f1ede8;
-  -webkit-transition: height .3s;
-  transition: height .3s;
+  -webkit-transition: height .2s;
+  transition: height .2s;
 }
 
-#secondPane #learnMore #learnMoreSpan {
+button span {
   position: relative;
   z-index: 5;
-  color: #f1ede8;
   -webkit-transition: color .3s;
   transition: color .3s;
 }
 
-#secondPane #learnMore:hover #learnMoreSpan {
-  color: #6b3b4e;
+button:hover:before {
+  height: 100%;
 }
 
-#secondPane #learnMore:hover:before {
-  height: 100%;
+#thirdPane {
+  height: calc(var(--page-height) * .80);
+  background-color: #f1ede8;
+  margin-top: -1.3%;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  position: relative;
+  text-align: center;
+}
+
+#thirdPane #thirdContent {
+  width: 60%;
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#thirdPane #thirdContent h3 {
+  font-size: 4vmax;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+#thirdPane #thirdContent p {
+  font-size: 2vmax;
+}
+
+#thirdPane #thirdContent label {
+  display: none;
+}
+
+#thirdPane #thirdContent input {
+  outline: none;
+  border: 1px solid black;
+  padding: 10%;
+  background-color: #f1ede8;
+  margin-top: 3%;
+  margin-left: -5%;
+}
+
+#thirdPane #thirdContent input:invalid {
+  border: 2px solid #6b3b4e;
+}
+
+#thirdPane #thirdContent input:valid {
+  border: 2px solid #558c4f;
+}
+
+#thirdPane #emailSubmit {
+  background-color: #f1ede8;
+  position: absolute;
+  bottom: 10%;
+  height: 6.25%;
+}
+
+#thirdPane #emailSubmit:before {
+  background-color: #6b3b4e;
+}
+
+#thirdPane #emailSubmit span {
+  color: #1B1620;
+}
+
+#thirdPane #emailSubmit:hover #emailSubmitSpan {
+  color: #f1ede8;
 }
 
 #footerDiv {
@@ -355,6 +441,10 @@ html, body {
 }
 
 @media screen and (max-width: 800px) {
+  .button {
+    width: 25%;
+    font-size: 2vmax;
+  }
   #secondPane #wwd {
     font-size: 5vmax;
   }
@@ -371,6 +461,7 @@ html, body {
   #secondPane .cardImg {
     left: 2%;
     top: 0px;
+    display: relative;
   }
   #secondPane .cardContent {
     left: 5%;
@@ -382,10 +473,6 @@ html, body {
     top: 5%;
     left: 20%;
   }
-  #secondPane #learnMore {
-    width: 25%;
-    font-size: 2vmax;
-  }
 }
 
 @media screen and (max-width: 450px) {
@@ -396,13 +483,28 @@ html, body {
   #secondPane .card {
     width: 90%;
     left: 5%;
+    display: relative;
+    height: 25%;
   }
   #secondPane .cardContent .cardContentText {
     left: 20%;
+    top: 10%;
   }
   #secondPane .cardImg {
     min-width: 100px;
     min-height: 100px;
+  }
+  #thirdPane #thirdContent {
+    height: 50%;
+  }
+  #thirdPane h3 {
+    font-size: 6vmax;
+  }
+  #thirdPane p {
+    font-size: 4vmax;
+  }
+  #footerDiv #footer {
+    width: 95%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
