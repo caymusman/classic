@@ -357,7 +357,7 @@ button:hover:before {
   height: var(--page-height);
   background-color: #3E3940;
   position: relative;
-  background-image: url("/img/leaf.svg");
+  background-image: url("img/leaf.svg");
   background-size: 40% 60%;
   display: -ms-grid;
   display: grid;
