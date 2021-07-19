@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 :root {
-  --page-height: 0px;
-  --page-width: 0px;
+  --page-height: 900px;
 }
 
 html, body {
@@ -176,7 +175,6 @@ html, body {
 }
 
 #secondPane #cardDiv {
-  margin-top: 8%;
   width: 80%;
   height: 50%;
   display: -webkit-box;
@@ -344,17 +342,25 @@ button:hover:before {
 }
 
 .headers {
-  position: absolute;
+  position: relative;
   left: 10%;
   top: 5%;
   font-size: 3vmax;
   color: #f1ede8;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
 }
 
 #thirdPane {
+  margin-top: -2.5%;
   height: var(--page-height);
   background-color: #3E3940;
   position: relative;
+}
+
+#thirdPane h2 {
+  padding-top: 5%;
 }
 
 #thirdPane #ourMission {
@@ -397,7 +403,6 @@ button:hover:before {
 }
 
 #fourthPane #fourthContent {
-  margin-top: 10%;
   position: relative;
   height: 50%;
   width: 90%;
@@ -575,7 +580,6 @@ button:hover:before {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 15%;
   }
   #secondPane .card {
     width: 80%;
@@ -584,6 +588,8 @@ button:hover:before {
     left: 2%;
     top: 0px;
     display: relative;
+    min-width: 50px;
+    min-height: 50px;
   }
   #secondPane .cardContent {
     left: 5%;
@@ -620,7 +626,6 @@ button:hover:before {
     position: static;
   }
   #secondPane #fourthPane #fourthContent {
-    margin-top: 20%;
     height: 70%;
     gap: 0;
   }
@@ -628,7 +633,6 @@ button:hover:before {
 
 @media screen and (max-width: 800px) and (max-width: 450px) {
   #secondPane #cardDiv {
-    margin-top: 25%;
     height: 60%;
   }
   #secondPane .card {
@@ -638,8 +642,8 @@ button:hover:before {
     height: 25%;
   }
   #secondPane .card .cardImg {
-    min-width: 88px;
-    min-height: 88px;
+    min-width: 5px;
+    min-height: 5px;
   }
   #secondPane .cardContent .cardContentText .timing {
     font-size: 3vw;

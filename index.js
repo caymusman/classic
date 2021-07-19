@@ -18,6 +18,11 @@ ddIcon.addEventListener("click", () => {
 let root = document.documentElement;
 
 window.onload = () => {
-    root.style.setProperty('--page-height', screen.height * .91 + "px");
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        root.style.setProperty('--page-height', screen.height + "px");
+    }else{
+        root.style.setProperty('--page-height', screen.height * .91 + "px");
+    }
+    
     root.style.setProperty('--page-width', screen.width + "px");
 }
