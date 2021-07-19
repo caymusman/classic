@@ -353,14 +353,55 @@ button:hover:before {
 }
 
 #thirdPane {
-  margin-top: -2.5%;
   height: var(--page-height);
   background-color: #3E3940;
   position: relative;
+  background-image: url("/img/leaf.svg");
+  background-size: 40% 60%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
 #thirdPane h2 {
-  padding-top: 5%;
+  position: absolute;
+  margin-top: 5%;
+}
+
+#thirdPane #thirdContent {
+  color: #f1ede8;
+  width: 60%;
+  height: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#thirdPane #thirdContent h3 {
+  font-size: 4vw;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#thirdPane #thirdContent h3 img {
+  width: 2vw;
+  height: 2vw;
+  margin-bottom: 2%;
+}
+
+#thirdPane #thirdContent h4 {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: 3vw;
 }
 
 #thirdPane #ourMission {
@@ -642,8 +683,8 @@ button:hover:before {
     height: 25%;
   }
   #secondPane .card .cardImg {
-    min-width: 5px;
-    min-height: 5px;
+    min-width: 70px;
+    min-height: 70px;
   }
   #secondPane .cardContent .cardContentText .timing {
     font-size: 3vw;
@@ -657,6 +698,16 @@ button:hover:before {
 }
 
 @media screen and (max-width: 800px) {
+  #thirdPane #thirdContent h3 {
+    font-size: 6vw;
+  }
+  #thirdPane #thirdContent h3 img {
+    width: 4vw;
+    height: 4vw;
+  }
+  #thirdPane #thirdContent h4 {
+    font-size: 5vw;
+  }
   #fourthPane #fourthContent {
     height: 50%;
   }
