@@ -53,9 +53,10 @@ html, body {
 #dropdown #ddColOne a, #dropdown #ddColTwo a {
   -webkit-transition: color 1s;
   transition: color 1s;
-  font-size: 4vmax;
+  font-size: 3.5vmax;
   text-decoration: none;
   color: black;
+  white-space: nowrap;
 }
 
 #dropdown.showDD {

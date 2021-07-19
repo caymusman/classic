@@ -48,9 +48,10 @@ html, body{
         justify-content: space-evenly;
         a{
             transition: color 1s;
-            font-size: 4vmax;
+            font-size: 3.5vmax;
             text-decoration: none;
             color: black;
+            white-space: nowrap;
         }
     }
 }
