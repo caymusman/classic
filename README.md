@@ -1,2 +1,3 @@
-# classic-page
-a classic 2020 website page with minimal js
+# classic
+a classic 2021 website page with minimal js
+Responsive and modern design
